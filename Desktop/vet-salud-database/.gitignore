@@ -1,30 +1,31 @@
-
-Database
+# Database backup files (NOT source SQL files)
 *.db
-*.sqlite
-*.sqlite3
 *.backup
 *.dump
+*.sqlite
+*.sqlite3
 
-Logs
+# Logs
 *.log
 logs/
 pg_log/
 
-Environment variables
+# Environment variables
 .env
 .env.local
 
-IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
+*.swo
 
-OS
+# OS files
 .DS_Store
 Thumbs.db
 
-Temporary files
+# Temporary files
 *.tmp
 *.temp
 *.bak
+*.old
