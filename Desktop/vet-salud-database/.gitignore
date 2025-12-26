@@ -1,0 +1,30 @@
+
+Database
+*.db
+*.sqlite
+*.sqlite3
+*.backup
+*.dump
+
+Logs
+*.log
+logs/
+pg_log/
+
+Environment variables
+.env
+.env.local
+
+IDE
+.vscode/
+.idea/
+*.swp
+
+OS
+.DS_Store
+Thumbs.db
+
+Temporary files
+*.tmp
+*.temp
+*.bak
