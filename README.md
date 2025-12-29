@@ -13,38 +13,6 @@
 - **[📂 Utility Scripts](./Desktop/vet-salud-database/scripts/)** - Deployment, backup, and maintenance automation
 - **[📂 Database Tests](./Desktop/vet-salud-database/tests/)** - Data integrity and validation tests
 
-### **Quick Start Commands:**
-```bash
-# Clone the repository
-git clone https://github.com/RaulAJaimes/vet-salud-database.git
-
-# Navigate to the project core
-cd vet-salud-database/Desktop/vet-salud-database
-
-# Explore the database structure
-ls -la database/schema/
-
-vet-salud-database/                          # Repository Root
-└── Desktop/vet-salud-database/              # Project Core (Development Environment)
-    ├── 📁 database/                         # Database Layer
-    │   ├── schema/                          # SQL Schema Definitions
-    │   │   ├── 01_core_schema.sql          # Main table structures
-    │   │   └── 02_constraints_indexes.sql  # Business rules & optimizations
-    │   ├── seeds/                           # Data Population
-    │   │   └── 01_sample_data.sql          # Realistic sample data
-    │   └── functions/                       # PostgreSQL Functions (Planned)
-    │       └── README.md                    # Functions roadmap
-    ├── 📁 docs/                             # Documentation Hub
-    │   ├── README.md                        # Documentation plan
-    │   └── diagrama_bd.md                   # Database diagram
-    ├── 📁 scripts/                          # Automation & DevOps
-    │   └── README.md                        # Scripts roadmap
-    ├── 📁 tests/                            # Quality Assurance
-    │   └── README.md                        # Testing strategy
-    ├── 📄 .gitignore                        # Version control configuration
-    ├── 📄 LICENSE                           # MIT License
-    └── 📄 README.md                         # This file
-
 
 ## 📊 Core Database Features
 
@@ -88,19 +56,24 @@ vet-salud-database/                          # Repository Root
 
 -- Load sample data for testing
 \i database/seeds/01_sample_data.sql
+```
 
 
 ## 2. Common Queries
 
 -- Today's appointments
+```sql
 SELECT * FROM vista_agenda_diaria WHERE fecha = CURRENT_DATE;
-
+```
 -- Vaccination due in next 7 days  
+```sql
 SELECT * FROM vista_recordatorios_vacunacion WHERE dias_para_proxima <= 7;
+```
 
 -- Patient medical history
+```sql
 SELECT * FROM vista_historial_medico WHERE id_mascota = 1;
-
+```
 
 ## 📁 File Structure Details
 
@@ -141,9 +114,35 @@ Architected for scalability, maintainability, and real-world clinical workflows
 > **Note:** This structure reflects a professional development environment organization where `Desktop/vet-salud-database/` represents the project workspace root.
 
 
+### **Quick Start Commands:**
+```bash
+# Clone the repository
+git clone https://github.com/RaulAJaimes/vet-salud-database.git
 
+# Navigate to the project core
+cd vet-salud-database/Desktop/vet-salud-database
 
+# Explore the database structure
+ls -la database/schema/
 
-
-
-
+vet-salud-database/                          # Repository Root
+└── Desktop/vet-salud-database/              # Project Core (Development Environment)
+    ├── 📁 database/                         # Database Layer
+    │   ├── schema/                          # SQL Schema Definitions
+    │   │   ├── 01_core_schema.sql          # Main table structures
+    │   │   └── 02_constraints_indexes.sql  # Business rules & optimizations
+    │   ├── seeds/                           # Data Population
+    │   │   └── 01_sample_data.sql          # Realistic sample data
+    │   └── functions/                       # PostgreSQL Functions (Planned)
+    │       └── README.md                    # Functions roadmap
+    ├── 📁 docs/                             # Documentation Hub
+    │   ├── README.md                        # Documentation plan
+    │   └── diagrama_bd.md                   # Database diagram
+    ├── 📁 scripts/                          # Automation & DevOps
+    │   └── README.md                        # Scripts roadmap
+    ├── 📁 tests/                            # Quality Assurance
+    │   └── README.md                        # Testing strategy
+    ├── 📄 .gitignore                        # Version control configuration
+    ├── 📄 LICENSE                           # MIT License
+    └── 📄 README.md                         # This file
+```
